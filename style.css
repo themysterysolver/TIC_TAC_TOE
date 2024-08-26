@@ -6,6 +6,8 @@
 :root{
     --orange:#F2C14E;
     --winning-blocks: #2d414b;
+    --draw:rgb(151, 79, 79);
+    --board:#4F6D6A ;
 }
 
 body{

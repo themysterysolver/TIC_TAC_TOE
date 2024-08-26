@@ -31,6 +31,7 @@ let winnerIndicator=getComputedStyle(document.body).getPropertyValue('--winning-
         count=count+1
         if(count==9){
             playertext.innerHTML=`game is draw!`
+            gameboard.style.backgroundColor=getComputedStyle(document.body).getPropertyValue('--draw');
             gameover=true
             return
         }
@@ -50,6 +51,7 @@ let winnerIndicator=getComputedStyle(document.body).getPropertyValue('--winning-
  restartBtn.addEventListener('click',restart)
  function restart(){
     spaces.fill(null)
+    gameboard.style.backgroundColor=getComputedStyle(document.body).getPropertyValue('--board');
     gameover=false
     count=0
     boxes.forEach(box=> {
