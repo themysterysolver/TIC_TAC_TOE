@@ -28,14 +28,11 @@ A simple **Tic Tac Toe** game built using **JavaScript, HTML, and CSS**. This pr
 
 ## 📸 Screenshots
 
-## 📸 Screenshots
-
 ### Game Start Screen
-![Game Start](images/screenshot1.png)
-
-### Winning Move
-![Winning Move](images/screenshot2.png)
-
+<p align="center"><img src="images/screenshot1.png" width="45%" alt="Game Start"></p>
+###Game winning move
+<p><img src="images/screenshot2.png" width="45%" alt="Winning Move"></p>
+ 
 ## 🛠️ Technologies Used
 
 - **HTML**: For the game structure.
