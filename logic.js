@@ -10,6 +10,7 @@ let boxes=Array.from(document.getElementsByClassName('box'));
  let spaces=Array(9).fill(null);
  console.log(spaces);
  let gameover=false
+ let count=0
 let winnerIndicator=getComputedStyle(document.body).getPropertyValue('--winning-blocks')
  const startGame= () =>{
     boxes.forEach(box=>box.addEventListener('click',runGame))
@@ -25,6 +26,12 @@ let winnerIndicator=getComputedStyle(document.body).getPropertyValue('--winning-
             playertext.innerHTML=`${currentplayer} has won!`
             let win_block=playerHasWon()
             win_block.map(box=>boxes[box].style.backgroundColor=winnerIndicator)
+            return
+        }
+        count=count+1
+        if(count==9){
+            playertext.innerHTML=`game is draw!`
+            gameover=true
             return
         }
         currentplayer=(currentplayer == x_text ? o_text:x_text);
@@ -43,6 +50,8 @@ let winnerIndicator=getComputedStyle(document.body).getPropertyValue('--winning-
  restartBtn.addEventListener('click',restart)
  function restart(){
     spaces.fill(null)
+    gameover=false
+    count=0
     boxes.forEach(box=> {
         box.innerText=""
         box.style.backgroundColor='' 
